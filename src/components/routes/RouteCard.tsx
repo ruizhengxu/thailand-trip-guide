@@ -4,7 +4,7 @@ import { PriorityBadge } from "../ui/PriorityBadge";
 import { ExternalMapButton } from "../ui/ExternalMapButton";
 import { FavoriteButton } from "../ui/FavoriteButton";
 import { CheckInButton } from "../ui/CheckInButton";
-import { getPlaceImage } from "../../utils/images";
+import { getPlaceImage, getAssetUrl } from "../../utils/images";
 import {
   Calendar,
   CheckCircle2,
@@ -45,7 +45,7 @@ export const RouteCard: React.FC<RouteCardProps> = ({
 
   const heroImage = routePlaces[0]
     ? getPlaceImage(routePlaces[0], true)
-    : "/images/bangkok/wat_arun_zhengwang_temple.jpg";
+    : getAssetUrl("/images/bangkok/wat_arun_zhengwang_temple.jpg");
 
 
   const intensityColors = {

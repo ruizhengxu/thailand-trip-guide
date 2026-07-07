@@ -2,6 +2,7 @@ import React, { useState, useMemo } from "react";
 import type { Region, FoodType, FoodPriority, Place } from "../../types";
 import { foodItems } from "../../data/foodItems";
 import { restaurants } from "../../data/restaurants";
+import { getAssetUrl } from "../../utils/images";
 import { RegionTabs } from "../ui/RegionTabs";
 import { FilterChips } from "../ui/FilterChips";
 import { PriorityBadge } from "../ui/PriorityBadge";
@@ -346,7 +347,7 @@ export const FoodGuideView: React.FC<FoodGuideViewProps> = ({
                 {/* Image Banner */}
                 <div className="relative h-48 w-full bg-sand/60 overflow-hidden">
                   <img
-                    src={item.imagePath}
+                    src={getAssetUrl(item.imagePath)}
                     alt={item.imageAlt || item.nameZh}
                     onError={(e) => {
                       // Fallback when image is not uploaded yet

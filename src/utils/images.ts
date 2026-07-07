@@ -91,16 +91,22 @@ const defaultRegionImage: Record<Region, { folder: string; file: string }> = {
   "koh-yao-yai": { folder: "koh_yao_yai", file: "santhiya_resort_view.jpg" },
 };
 
+export function getAssetUrl(path: string): string {
+  const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+  const cleanPath = path.startsWith("/") ? path : `/${path}`;
+  return `${base}${cleanPath}`;
+}
+
 export function getPlaceImage(place: Place, useThumbnail = true): string {
   const info = placeImageMap[place.id] || defaultRegionImage[place.region];
   const baseFolder = useThumbnail ? "/images/thumbnails" : "/images";
-  return `${baseFolder}/${info.folder}/${info.file}`;
+  return getAssetUrl(`${baseFolder}/${info.folder}/${info.file}`);
 }
 
 export function getRegionHeroImage(region: Region | "all"): string {
-  if (region === "bangkok") return "/images/bangkok/wat_arun_zhengwang_temple.jpg";
-  if (region === "phuket") return "/images/phuket/promthep_cape.jpg";
-  if (region === "koh-yao-yai") return "/images/koh_yao_yai/santhiya_resort_view.jpg";
-  return "/images/koh_yao_yai/santhiya_resort_view.jpg";
+  if (region === "bangkok") return getAssetUrl("/images/bangkok/wat_arun_zhengwang_temple.jpg");
+  if (region === "phuket") return getAssetUrl("/images/phuket/promthep_cape.jpg");
+  if (region === "koh-yao-yai") return getAssetUrl("/images/koh_yao_yai/santhiya_resort_view.jpg");
+  return getAssetUrl("/images/koh_yao_yai/santhiya_resort_view.jpg");
 }
 
