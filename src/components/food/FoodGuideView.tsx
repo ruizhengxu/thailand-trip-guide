@@ -373,7 +373,7 @@ export const FoodGuideView: React.FC<FoodGuideViewProps> = ({
                     </span>
                   </div>
                   <div className="absolute top-3 right-3">
-                    <PriorityBadge priority={item.priority} size="sm" />
+                    <PriorityBadge priority={item.priority} size="sm" solid />
                   </div>
                 </div>
 

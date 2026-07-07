@@ -52,7 +52,7 @@ export const PlaceCard: React.FC<PlaceCardProps> = ({
 
         {/* Top Badges */}
         <div className="absolute top-3 inset-x-3 flex items-center justify-between pointer-events-none">
-          <PriorityBadge priority={place.priority} size="sm" className="bg-card/95 backdrop-blur-md shadow-xs pointer-events-auto" />
+          <PriorityBadge priority={place.priority} size="sm" solid className="shadow-xs pointer-events-auto" />
           <div className="pointer-events-auto flex items-center gap-1.5">
             {onToggleVisited && (
               <CheckInButton

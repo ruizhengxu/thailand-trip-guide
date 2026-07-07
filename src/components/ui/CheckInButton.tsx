@@ -35,7 +35,7 @@ export const CheckInButton: React.FC<CheckInButtonProps> = ({
         e.stopPropagation();
         onToggle(e);
       }}
-      className={`rounded-full flex items-center justify-center transition-all duration-200 ${
+      className={`rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-200 ${
         withLabel ? "px-3 py-1.5 w-auto gap-1.5" : sizeClasses[size]
       } ${
         isVisited
@@ -46,12 +46,12 @@ export const CheckInButton: React.FC<CheckInButtonProps> = ({
       title={isVisited ? "取消打卡" : "打卡标记"}
     >
       <CheckCircle2
-        className={`${iconSizes[size]} transition-transform duration-200 ${
+        className={`${iconSizes[size]} transition-transform duration-200 flex-shrink-0 ${
           isVisited ? "fill-emerald-500 text-white scale-110" : ""
         }`}
       />
       {withLabel && (
-        <span className="font-medium text-xs">
+        <span className="font-medium text-xs whitespace-nowrap">
           {isVisited ? "已打卡" : "去打卡"}
         </span>
       )}

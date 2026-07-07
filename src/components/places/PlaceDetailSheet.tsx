@@ -89,59 +89,58 @@ export const PlaceDetailSheet: React.FC<PlaceDetailSheetProps> = ({
       {/* Sheet Container */}
       <div className={`relative z-10 w-full max-w-none sm:max-w-2xl bg-card rounded-none sm:rounded-3xl shadow-2xl border-0 sm:border sm:border-white/20 h-[100dvh] sm:h-auto sm:max-h-[90vh] flex flex-col overflow-hidden ${isClosing ? "animate-pop-out" : "animate-pop-in"}`}>
         {/* Top Image Header */}
-        <div className="relative h-56 sm:h-64 w-full bg-sand/40 flex-shrink-0">
+        <div className="relative min-h-[15rem] sm:min-h-[17rem] w-full bg-sand/40 flex-shrink-0 flex flex-col justify-between p-4 sm:p-5">
           <img
             src={imageUrl}
             alt={activePlace.displayName || activePlace.nameZh}
-            className="w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/10" />
 
-          {/* Close Button */}
-          <button
-            onClick={handleClose}
-            className="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/50 hover:bg-black/70 backdrop-blur-md text-white flex items-center justify-center border border-white/20 transition-all"
-            aria-label="关闭"
-          >
-            <X className="w-5 h-5" />
-          </button>
-
-          {/* Top Left Badges */}
-          <div className="absolute top-4 left-4 flex items-center gap-2">
-            <span className="px-3 py-1 rounded-full bg-black/50 backdrop-blur-md text-white text-xs font-semibold border border-white/20 flex items-center gap-1.5">
-              <MapPin className="w-3.5 h-3.5 text-teal-100" />
-              <span>{regionNames[activePlace.region] || activePlace.region}</span>
-            </span>
-            <span className="px-2.5 py-1 rounded-full bg-black/50 backdrop-blur-md text-white font-mono text-xs border border-white/20">
-              {activePlace.id}
-            </span>
+          {/* Top Bar: Badges and Close Button */}
+          <div className="relative z-10 flex items-start justify-between w-full gap-2">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="px-3 py-1 rounded-full bg-black/50 backdrop-blur-md text-white text-xs font-semibold border border-white/20 flex items-center gap-1.5">
+                <MapPin className="w-3.5 h-3.5 text-teal-100" />
+                <span>{regionNames[activePlace.region] || activePlace.region}</span>
+              </span>
+              <span className="px-2.5 py-1 rounded-full bg-black/50 backdrop-blur-md text-white font-mono text-xs border border-white/20">
+                {activePlace.id}
+              </span>
+            </div>
+            <button
+              onClick={handleClose}
+              className="w-9 h-9 rounded-full bg-black/50 hover:bg-black/70 backdrop-blur-md text-white flex items-center justify-center border border-white/20 transition-all flex-shrink-0"
+              aria-label="关闭"
+            >
+              <X className="w-5 h-5" />
+            </button>
           </div>
 
-          {/* Bottom Title Area */}
-          <div className="absolute bottom-4 inset-x-5 text-white flex items-end justify-between gap-4">
-            <div>
-              <div className="flex items-center gap-2 mb-1.5">
-                <PriorityBadge priority={activePlace.priority} size="sm" />
-                <span className="bg-teal px-2 py-0.5 rounded text-[11px] font-semibold text-white">
+          {/* Bottom Title & Actions Area */}
+          <div className="relative z-10 text-white flex items-end justify-between gap-3 mt-8">
+            <div className="min-w-0 flex-1">
+              <div className="flex flex-wrap items-center gap-2 mb-2">
+                <PriorityBadge priority={activePlace.priority} size="sm" solid />
+                <span className="bg-teal px-2 py-0.5 rounded text-[11px] font-semibold text-white shadow-xs">
                   {normalizeCategory(activePlace.category, activePlace.kind)}
                 </span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight font-sans">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight font-sans text-white drop-shadow-md">
                 {activePlace.displayName || activePlace.nameZh}
               </h2>
               {activePlace.nameEn && (
-                <p className="text-sm text-sand/80 font-normal italic mt-0.5">
+                <p className="text-sm text-sand/90 font-normal italic mt-0.5 drop-shadow-sm">
                   {activePlace.nameEn}
                 </p>
               )}
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 flex-shrink-0">
               {onToggleVisited && activePlace && (
                 <CheckInButton
                   isVisited={!!isVisited}
                   onToggle={(e) => onToggleVisited(activePlace.id, e)}
                   size="lg"
-                  withLabel
                 />
               )}
               <FavoriteButton

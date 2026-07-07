@@ -81,17 +81,17 @@ export const RouteCard: React.FC<RouteCardProps> = ({
   return (
     <div className="glass-card rounded-3xl overflow-hidden border border-line/80 hover:shadow-premium transition-all duration-300 flex flex-col">
       {/* Header Banner */}
-      <div className="relative h-48 sm:h-56 w-full overflow-hidden bg-sand/40">
+      <div className="relative min-h-[14rem] sm:min-h-[16rem] w-full overflow-hidden bg-sand/40 flex flex-col justify-between p-4 sm:p-5">
         <img
           src={heroImage}
           alt={route.titleZh}
-          className="w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/10" />
 
         {/* Top Badges */}
-        <div className="absolute top-4 inset-x-4 flex items-center justify-between pointer-events-none">
+        <div className="relative z-10 flex items-center justify-between w-full">
           <span className="bg-black/50 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-semibold border border-white/20 flex items-center gap-1.5 pointer-events-auto">
             <MapPin className="w-3.5 h-3.5 text-teal-100" />
             <span>{regionNames[route.region] || route.region}</span>
@@ -102,7 +102,7 @@ export const RouteCard: React.FC<RouteCardProps> = ({
         </div>
 
         {/* Bottom Title Area */}
-        <div className="absolute bottom-4 inset-x-5 text-white">
+        <div className="relative z-10 text-white mt-6">
           <div className="flex flex-wrap items-center gap-2 mb-1.5">
             <span
               className={`px-2.5 py-0.5 rounded-full text-[11px] font-semibold border backdrop-blur-md ${
@@ -121,11 +121,11 @@ export const RouteCard: React.FC<RouteCardProps> = ({
             </span>
           </div>
 
-          <h3 className="text-xl sm:text-2xl font-bold tracking-tight font-sans">
+          <h3 className="text-xl sm:text-2xl font-bold tracking-tight font-sans drop-shadow-md">
             {route.titleZh}
           </h3>
           {route.titleEn && (
-            <p className="text-xs text-sand/80 font-normal italic">
+            <p className="text-xs text-sand/90 font-normal italic drop-shadow-sm">
               {route.titleEn}
             </p>
           )}

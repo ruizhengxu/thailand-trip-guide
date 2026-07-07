@@ -7,6 +7,7 @@ interface PriorityBadgeProps {
   showDot?: boolean;
   size?: "sm" | "md" | "lg";
   className?: string;
+  solid?: boolean;
 }
 
 export const PriorityBadge: React.FC<PriorityBadgeProps> = ({
@@ -14,6 +15,7 @@ export const PriorityBadge: React.FC<PriorityBadgeProps> = ({
   showDot = true,
   size = "md",
   className = "",
+  solid = false,
 }) => {
   const info = getPriorityInfo(priority);
 
@@ -29,13 +31,28 @@ export const PriorityBadge: React.FC<PriorityBadgeProps> = ({
     lg: "w-2.5 h-2.5",
   };
 
+  const solidClasses: Record<string, string> = {
+    core: "bg-emerald-600 text-white border-transparent shadow-sm",
+    optional: "bg-amber-500 text-white border-transparent shadow-sm",
+    transport: "bg-sky-600 text-white border-transparent shadow-sm",
+    remote: "bg-purple-600 text-white border-transparent shadow-sm",
+    caution: "bg-rose-600 text-white border-transparent shadow-sm",
+    "must-try": "bg-rose-600 text-white font-bold border-transparent shadow-sm",
+    recommended: "bg-amber-600 text-white font-bold border-transparent shadow-sm",
+    situational: "bg-teal text-white font-medium border-transparent shadow-sm",
+  };
+
+  const badgeStyle = solid
+    ? solidClasses[priority as string] || "bg-teal text-white border-transparent shadow-sm"
+    : `${info.bgClass} ${info.textClass} ${info.borderClass}`;
+
   return (
     <span
-      className={`inline-flex items-center rounded-full border ${info.bgClass} ${info.textClass} ${info.borderClass} ${sizeClasses[size]} ${className}`}
+      className={`inline-flex items-center rounded-full border ${badgeStyle} ${sizeClasses[size]} ${className}`}
     >
       {showDot && (
         <span
-          className={`rounded-full ${info.dotClass} ${dotSizes[size]} animate-pulse-subtle`}
+          className={`rounded-full ${solid ? "bg-white" : info.dotClass} ${dotSizes[size]} animate-pulse-subtle`}
         />
       )}
       <span>{info.labelZh}</span>
