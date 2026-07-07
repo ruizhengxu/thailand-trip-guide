@@ -1,0 +1,139 @@
+@import "leaflet/dist/leaflet.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: 244 240 232;
+    --color-card: 251 250 248;
+    --color-text: 17 43 60;
+    --color-muted: 93 111 123;
+    --color-sand: 229 221 205;
+    --color-line: 216 203 183;
+  }
+
+  .dark {
+    --color-bg: 11 19 30;
+    --color-card: 21 34 51;
+    --color-text: 240 244 248;
+    --color-muted: 138 155 168;
+    --color-sand: 30 46 66;
+    --color-line: 45 64 87;
+  }
+
+  body {
+    @apply bg-background text-text font-sans antialiased selection:bg-teal selection:text-white transition-colors duration-300;
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-sand/30;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-teal/40 rounded-full hover:bg-teal/60 transition-colors;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card/85 backdrop-blur-md border border-line/50 shadow-premium transition-colors duration-300;
+  }
+  
+  .glass-header {
+    @apply bg-background/90 backdrop-blur-md border-b border-line/60;
+  }
+
+  .glass-nav {
+    @apply bg-card/95 backdrop-blur-lg border-t border-line/50 shadow-[0_-4px_20px_rgba(17,43,60,0.06)];
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-teal to-teal-light text-white font-medium px-5 py-3 rounded-xl shadow-md shadow-teal/20 hover:shadow-lg hover:shadow-teal/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 flex items-center justify-center gap-2;
+  }
+
+  .btn-secondary {
+    @apply bg-card hover:bg-sand/40 text-text border border-line/80 font-medium px-5 py-3 rounded-xl shadow-sm hover:shadow transition-all duration-200 flex items-center justify-center gap-2;
+  }
+
+  .chip {
+    @apply px-3.5 py-1.5 rounded-full text-xs font-medium border transition-all duration-200 cursor-pointer select-none flex items-center gap-1.5;
+  }
+  
+  .chip-active {
+    @apply bg-teal text-white border-teal shadow-sm shadow-teal/20;
+  }
+  
+  .chip-inactive {
+    @apply bg-card hover:bg-sand/30 text-muted border-line/60 hover:text-text;
+  }
+}
+
+/* Leaflet map customization */
+.leaflet-container {
+  font-family: inherit !important;
+  z-index: 10 !important;
+}
+
+.custom-div-icon {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Hide default leaflet attribution prefix if needed, keep copyright */
+.leaflet-control-attribution a {
+  color: #1F7A74 !important;
+}
+
+/* Leaflet popup customization for dark and light modes */
+.leaflet-popup-content-wrapper {
+  background: rgb(var(--color-card)) !important;
+  color: rgb(var(--color-text)) !important;
+  border-radius: 1rem !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(var(--color-line), 0.6) !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4) !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  line-height: 1.5 !important;
+  width: 280px !important;
+  min-width: 280px !important;
+}
+
+.leaflet-popup-tip {
+  background: rgb(var(--color-card)) !important;
+  border-left: 1px solid rgba(var(--color-line), 0.6) !important;
+  border-top: 1px solid rgba(var(--color-line), 0.6) !important;
+}
+
+.leaflet-popup-close-button {
+  color: rgb(var(--color-text)) !important;
+  top: 10px !important;
+  right: 10px !important;
+  z-index: 20 !important;
+  background: rgba(0, 0, 0, 0.25) !important;
+  border-radius: 9999px !important;
+  width: 26px !important;
+  height: 26px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: white !important;
+  padding: 0 !important;
+  font-size: 16px !important;
+  transition: all 0.2s !important;
+}
+
+.leaflet-popup-close-button:hover {
+  background: rgba(0, 0, 0, 0.5) !important;
+  color: white !important;
+}

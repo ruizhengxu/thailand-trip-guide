@@ -1,0 +1,58 @@
+﻿Region,Name,Latitude,Longitude,Category,Priority,Route,Description
+曼谷 Bangkok,大皇宫 / 玉佛寺 Grand Palace & Wat Phra Kaew,13.75,100.4913,寺庙/地标,核心,Route A,第一次来曼谷的地标；早上去，注意寺庙着装，别把它排成全天核心。
+曼谷 Bangkok,卧佛寺 Wat Pho,13.7466,100.493,寺庙/地标,核心,Route A,和大皇宫、郑王庙同线；适合上午/中午衔接，注意穿着。
+曼谷 Bangkok,郑王庙 Wat Arun,13.7437,100.4889,寺庙/日落,核心,Route A,曼谷最适合情侣拍照和看日落的核心点；可入内或在对岸看夜景。
+曼谷 Bangkok,ICONSIAM / SookSiam,13.7266,100.5101,商场/河景,核心,Route A/C,雨天避暑、河景、SookSiam 美食区和购物；适合作为河边路线收尾。
+曼谷 Bangkok,Song Wat Road,13.7415,100.5072,街区/咖啡,核心,Route C,咖啡、老街区、拍照；适合接唐人街和 ICONSIAM。
+曼谷 Bangkok,唐人街 Yaowarat Chinatown,13.7394,100.51,美食/夜市,核心,Route C,晚上气氛最好；人多、热，准备现金，不要排太多网红店。
+曼谷 Bangkok,Talat Noi,13.7346,100.5128,街区/摄影,选配,Route C,靠近 Song Wat/唐人街，适合壁画、咖啡和街拍。
+曼谷 Bangkok,Ratchawong Pier,13.7389,100.5054,码头/交通,交通,Route C,唐人街附近码头，可用于坐船去 ICONSIAM/河边区域；出发前确认船线。
+曼谷 Bangkok,Siam Square / MBK,13.7461,100.5349,商圈/购物,核心,Route B,购物、街拍、MBK 天桥；雨天和到达日最稳。
+曼谷 Bangkok,CentralWorld / Big C Ratchadamri,13.7465,100.5392,商圈/购物,核心,Route B,泰奶、连锁餐厅、Big C 零食补给；适合和 Siam 同天。
+曼谷 Bangkok,Banthat Thong / Chula night food area,13.7405,100.5253,美食/夜市,核心,Route B,朱拉隆功/Banthat Thong 一带小吃多，适合作为 Siam 路线晚餐。
+曼谷 Bangkok,水门寺大佛 Wat Paknam Phasi Charoen,13.7229,100.4627,寺庙/拍照,选配,Route D,半日拍照点；不在主商圈，天气好、有空时再去。
+曼谷 Bangkok,Khlong Bang Luang / Artist House,13.7305,100.4603,运河/本地体验,选配,Route D,可与水门寺大佛、长尾船组合；雨天体验下降。
+曼谷 Bangkok,Chatuchak Weekend Market,13.7996,100.5501,市场/购物,选配,Route E,只适合周末；很大很热，别安排在疲劳日。
+曼谷 Bangkok,King Power Mahanakhon SkyWalk,13.7249,100.5294,高空/夜景,选配,Route E,天气晴时适合日落/夜景；下雨或雾霾时性价比下降。
+曼谷 Bangkok,四面佛 Erawan Shrine,13.7443,100.5404,地标/祈福,选配,Route B,CentralWorld/Siam 附近顺路短停，不建议专门绕路。
+曼谷 Bangkok,曼谷艺术文化中心 BACC,13.7466,100.53,室内/艺术,选配,Route B/E,雨天备选，靠近 Siam/MBK。
+曼谷 Bangkok,金山寺 Wat Saket / Golden Mount,13.7539,100.5066,寺庙/城市景观,选配,Route E,老城备选，天气好时可看城市视角。
+曼谷 Bangkok,三象神博物馆 Erawan Museum,13.6288,100.5899,远郊/拍照,远程,Route E,远离市中心，作为远郊拍照点可选；不建议和老城核心同天硬塞。
+曼谷 Bangkok,Ayutthaya Historical Park,14.3559,100.5689,远郊/一日游,远程,Route E,如果喜欢历史/摄影可安排一日游；会占用完整一天。
+普吉岛 Phuket,普吉镇老街 Phuket Old Town / Thalang Road,7.884,98.389,老街/摄影,核心,Route A,彩色骑楼、咖啡、壁画；适合 2–4 小时慢逛。
+普吉岛 Phuket,Lard Yai Sunday Walking Street,7.8845,98.388,夜市,核心,Route A,周日夜市；你们 8/16 正好周日，优先保留。
+普吉岛 Phuket,Soi Romanee,7.8847,98.3897,老街/摄影,核心,Route A,普吉老街最适合拍照的小巷之一，可与 Thalang Road 同走。
+普吉岛 Phuket,查龙寺 Wat Chalong,7.846,98.337,寺庙/文化,核心,Route B,普吉最代表性寺庙之一；遮肩遮膝。
+普吉岛 Phuket,普吉大佛 Big Buddha,7.8276,98.3128,地标/观景,选配,Route B,开放和上山路况需临近确认；不要为了它牺牲核心节奏。
+普吉岛 Phuket,Karon Viewpoint,7.7966,98.3068,观景台,核心,Route B/C,三海滩视角，短停拍照性价比高。
+普吉岛 Phuket,Kata Beach,7.8214,98.2993,海滩,选配,Route C,西海岸经典海滩；8月注意浪和红旗。
+普吉岛 Phuket,Karon Beach,7.8423,98.2941,海滩,选配,Route C,适合散步和看海；雨季不一定适合下水。
+普吉岛 Phuket,Nai Harn Beach,7.7752,98.3067,海滩,核心,Route C,南部更松弛，情侣感强；红旗不要下水。
+普吉岛 Phuket,Ya Nui Beach,7.766,98.3064,海滩/拍照,核心,Route C,小海湾，适合短停拍照；看浪况。
+普吉岛 Phuket,Promthep Cape 神仙半岛,7.7622,98.3051,日落/观景,核心,Route B/C,经典日落点；提前 45–60 分钟到。
+普吉岛 Phuket,Rawai Seafood Market,7.775,98.329,海鲜/晚餐,核心,Route C,现买现加工；先问清每公斤价、加工费和总价。
+普吉岛 Phuket,Ao Po Grand Marina,8.067,98.445,码头/转船,交通,Transfer,18 Aug 去 Santhiya 的关键码头；提前确认司机和船班。
+普吉岛 Phuket,HKT Phuket International Airport,8.113,98.317,机场/交通,交通,Transfer,15 Aug 抵达、23 Aug 出发；最后一晚住附近降低风险。
+普吉岛 Phuket,Nai Yang Beach / Dewa area,8.0915,98.3007,机场缓冲/海滩,交通,Final night,22–23 Aug 机场缓冲夜区域；适合散步、早睡、返程。
+普吉岛 Phuket,Mai Khao Plane Spotting Beach,8.154,98.298,飞机海滩,选配,Route E,住机场附近时顺路；看风向，不保证低空降落。
+普吉岛 Phuket,Phuket Elephant Sanctuary,8.036,98.39,动物保护/雨天备选,选配,Route E,优先 no riding、观察/教育型项目，避免骑象/表演。
+普吉岛 Phuket,Central Phuket,7.8915,98.3682,商场/雨天,选配,Route E,雨天、补给、简单吃饭的室内备选。
+普吉岛 Phuket,Chillva Market,7.9174,98.3688,夜市,选配,Route E,普吉夜市备选，适合轻松吃喝。
+普吉岛 Phuket,Naka Weekend Market,7.8806,98.366,夜市/市场,选配,Route E,周末市场备选；根据时间和体力决定。
+普吉岛 Phuket,Patong / Bangla Road,7.8957,98.2965,夜生活,谨慎,Optional,很热闹但吵，情侣浪漫度一般；不建议作为住宿核心。
+普吉岛 Phuket,Phang Nga Bay / James Bond Island direction,8.2745,98.5016,出海/远程,远程,Route D,雨季相对更稳的景观型出海；必须可取消。
+普吉岛 Phuket,Phi Phi Islands / Maya Bay direction,7.6788,98.7653,出海/远程,远程,Route D,经典但船程长、人多、雨季颠簸风险更高。
+普吉岛 Phuket,Racha Yai Island,7.604,98.371,出海/远程,远程,Route D,浮潜/水上项目备选；仍看海况。
+普吉岛 Phuket,Coral Island / Koh Hae,7.745,98.373,出海/远程,远程,Route D,离普吉较近的出海备选；雨季仍需确认浪况。
+瑶亚岛 Koh Yao Yai / Santhiya,Santhiya Koh Yao Yai Resort & Spa / Loh Pared Bay,7.983,98.579,酒店/度假核心,核心,Route A,18–22 Aug 四晚度假核心：泳池、海景、SPA、七夕晚餐和日落。
+瑶亚岛 Koh Yao Yai / Santhiya,Loh Pared Beach / Bay,7.9808,98.5785,海滩/日落,核心,Route A,Santhiya 周边海湾；适合慢节奏散步和日落。
+瑶亚岛 Koh Yao Yai / Santhiya,Laem Yai / Santhiya Pier area,7.98,98.573,码头/交通,交通,Transfer,Santhiya 周边码头区域；具体上下船点以酒店通知为准。
+瑶亚岛 Koh Yao Yai / Santhiya,Laem Haad Sandbar,8.106,98.607,沙洲/拍照,核心,Route B,瑶亚岛代表性拍照点；看潮汐，低潮更好。
+瑶亚岛 Koh Yao Yai / Santhiya,Chong Lard Pier,8.073,98.6005,码头/交通,交通,Route B/C,北部码头，可作为 Laem Haad/岛内路线参考点。
+瑶亚岛 Koh Yao Yai / Santhiya,Khlong Hia Pier,8.098,98.594,码头/交通,交通,Route B/C,北部码头，具体转乘以酒店/当地司机确认。
+瑶亚岛 Koh Yao Yai / Santhiya,Prunai / local village area,7.946,98.584,村落/本地生活,核心,Route C,岛内轻量环线可经过；看村落、橡胶园和本地生活。
+瑶亚岛 Koh Yao Yai / Santhiya,Loh Jak Pier / sunset area,7.913,98.586,码头/日落,选配,Route C,南部/西海岸轻量路线的日落参考点。
+瑶亚岛 Koh Yao Yai / Santhiya,Ao Muong / southern bay,7.895,98.602,海湾/选配,选配,Route C,南部海湾选配；不用为环全岛硬塞。
+瑶亚岛 Koh Yao Yai / Santhiya,Koh Yao Noi / Manoh Pier direction,8.15,98.625,邻岛方向,选配,Optional,可作为邻岛方向参考；你们四晚主轴仍建议留在 Santhiya/瑶亚岛。
+瑶亚岛 Koh Yao Yai / Santhiya,Hong Islands direction,8.2203,98.6741,私人船/远程,远程,Route D,天气稳定、可取消时才考虑私人船；不要放在离岛前一天。
+瑶亚岛 Koh Yao Yai / Santhiya,Phang Nga Bay direction from Koh Yao Yai,8.2745,98.5016,私人船/远程,远程,Route D,私人船/攀牙湾方向参考点；8月以海况为准。

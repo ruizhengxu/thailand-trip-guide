@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<name>Thailand Couple Trip 2026 - Bangkok / Phuket / Koh Yao Yai</name>
+<description><![CDATA[Google Earth anchor points exported from the trip PPT. Coordinates are intended for route planning and visual distribution; confirm exact entrance/piers/opening status in Google Maps or with hotel before departure.]]></description>
+
+<Style id="coreStyle"><IconStyle><color>ff00a000</color><scale>1.15</scale><Icon><href>http://maps.google.com/mapfiles/kml/paddle/grn-circle.png</href></Icon></IconStyle><LabelStyle><scale>0.8</scale></LabelStyle></Style>
+<Style id="optionalStyle"><IconStyle><color>ff00ffff</color><scale>1.0</scale><Icon><href>http://maps.google.com/mapfiles/kml/paddle/ylw-circle.png</href></Icon></IconStyle><LabelStyle><scale>0.75</scale></LabelStyle></Style>
+<Style id="transportStyle"><IconStyle><color>ffffa500</color><scale>1.0</scale><Icon><href>http://maps.google.com/mapfiles/kml/paddle/blu-circle.png</href></Icon></IconStyle><LabelStyle><scale>0.75</scale></LabelStyle></Style>
+<Style id="remoteStyle"><IconStyle><color>ff800080</color><scale>0.95</scale><Icon><href>http://maps.google.com/mapfiles/kml/paddle/purple-circle.png</href></Icon></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<Style id="cautionStyle"><IconStyle><color>ff0000ff</color><scale>0.95</scale><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<Style id="routeStyle"><LineStyle><color>cc1e73be</color><width>4</width></LineStyle></Style>
+
+<Folder><name>曼谷 Bangkok</name><open>1</open>
+<Folder><name>核心</name>
+<Placemark>
+<name>大皇宫 / 玉佛寺 Grand Palace &amp; Wat Phra Kaew</name>
+<styleUrl>#coreStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>曼谷 Bangkok<br/>
+            <b>类别：</b>寺庙/地标<br/>
+            <b>优先级：</b>核心<br/>
+            <b>路线组合：</b>Route A<br/>
+            <b>建议：</b>第一次来曼谷的地标；早上去，注意寺庙着装，别把它排成全天核心。<br/>
+            <b>坐标：</b>13.750000, 100.491300<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>100.491300,13.750000,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>卧佛寺 Wat Pho</name>
+<styleUrl>#coreStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>曼谷 Bangkok<br/>
+            <b>类别：</b>寺庙/地标<br/>
+            <b>优先级：</b>核心<br/>
+            <b>路线组合：</b>Route A<br/>
+            <b>建议：</b>和大皇宫、郑王庙同线；适合上午/中午衔接，注意穿着。<br/>
+            <b>坐标：</b>13.746600, 100.493000<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>100.493000,13.746600,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>郑王庙 Wat Arun</name>
+<styleUrl>#coreStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>曼谷 Bangkok<br/>
+            <b>类别：</b>寺庙/日落<br/>
+            <b>优先级：</b>核心<br/>
+            <b>路线组合：</b>Route A<br/>
+            <b>建议：</b>曼谷最适合情侣拍照和看日落的核心点；可入内或在对岸看夜景。<br/>
+            <b>坐标：</b>13.743700, 100.488900<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>100.488900,13.743700,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>ICONSIAM / SookSiam</name>
+<styleUrl>#coreStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>曼谷 Bangkok<br/>
+            <b>类别：</b>商场/河景<br/>
+            <b>优先级：</b>核心<br/>
+            <b>路线组合：</b>Route A/C<br/>
+            <b>建议：</b>雨天避暑、河景、SookSiam 美食区和购物；适合作为河边路线收尾。<br/>
+            <b>坐标：</b>13.726600, 100.510100<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>100.510100,13.726600,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Song Wat Road</name>
+<styleUrl>#coreStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>曼谷 Bangkok<br/>
+            <b>类别：</b>街区/咖啡<br/>
+            <b>优先级：</b>核心<br/>
+            <b>路线组合：</b>Route C<br/>
+            <b>建议：</b>咖啡、老街区、拍照；适合接唐人街和 ICONSIAM。<br/>
+            <b>坐标：</b>13.741500, 100.507200<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>100.507200,13.741500,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>唐人街 Yaowarat Chinatown</name>
+<styleUrl>#coreStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>曼谷 Bangkok<br/>
+            <b>类别：</b>美食/夜市<br/>
+            <b>优先级：</b>核心<br/>
+            <b>路线组合：</b>Route C<br/>
+            <b>建议：</b>晚上气氛最好；人多、热，准备现金，不要排太多网红店。<br/>
+            <b>坐标：</b>13.739400, 100.510000<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>100.510000,13.739400,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Siam Square / MBK</name>
+<styleUrl>#coreStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>曼谷 Bangkok<br/>
+            <b>类别：</b>商圈/购物<br/>
+            <b>优先级：</b>核心<br/>
+            <b>路线组合：</b>Route B<br/>
+            <b>建议：</b>购物、街拍、MBK 天桥；雨天和到达日最稳。<br/>
+            <b>坐标：</b>13.746100, 100.534900<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>100.534900,13.746100,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>CentralWorld / Big C Ratchadamri</name>
+<styleUrl>#coreStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>曼谷 Bangkok<br/>
+            <b>类别：</b>商圈/购物<br/>
+            <b>优先级：</b>核心<br/>
+            <b>路线组合：</b>Route B<br/>
+            <b>建议：</b>泰奶、连锁餐厅、Big C 零食补给；适合和 Siam 同天。<br/>
+            <b>坐标：</b>13.746500, 100.539200<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>100.539200,13.746500,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Banthat Thong / Chula night food area</name>
+<styleUrl>#coreStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>曼谷 Bangkok<br/>
+            <b>类别：</b>美食/夜市<br/>
+            <b>优先级：</b>核心<br/>
+            <b>路线组合：</b>Route B<br/>
+            <b>建议：</b>朱拉隆功/Banthat Thong 一带小吃多，适合作为 Siam 路线晚餐。<br/>
+            <b>坐标：</b>13.740500, 100.525300<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>100.525300,13.740500,0</coordinates></Point>
+</Placemark>
+</Folder>
+<Folder><name>选配</name>
+<Placemark>
+<name>Talat Noi</name>
+<styleUrl>#optionalStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>曼谷 Bangkok<br/>
+            <b>类别：</b>街区/摄影<br/>
+            <b>优先级：</b>选配<br/>
+            <b>路线组合：</b>Route C<br/>
+            <b>建议：</b>靠近 Song Wat/唐人街，适合壁画、咖啡和街拍。<br/>
+            <b>坐标：</b>13.734600, 100.512800<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>100.512800,13.734600,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>水门寺大佛 Wat Paknam Phasi Charoen</name>
+<styleUrl>#optionalStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>曼谷 Bangkok<br/>
+            <b>类别：</b>寺庙/拍照<br/>
+            <b>优先级：</b>选配<br/>
+            <b>路线组合：</b>Route D<br/>
+            <b>建议：</b>半日拍照点；不在主商圈，天气好、有空时再去。<br/>
+            <b>坐标：</b>13.722900, 100.462700<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>100.462700,13.722900,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Khlong Bang Luang / Artist House</name>
+<styleUrl>#optionalStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>曼谷 Bangkok<br/>
+            <b>类别：</b>运河/本地体验<br/>
+            <b>优先级：</b>选配<br/>
+            <b>路线组合：</b>Route D<br/>
+            <b>建议：</b>可与水门寺大佛、长尾船组合；雨天体验下降。<br/>
+            <b>坐标：</b>13.730500, 100.460300<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>100.460300,13.730500,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Chatuchak Weekend Market</name>
+<styleUrl>#optionalStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>曼谷 Bangkok<br/>
+            <b>类别：</b>市场/购物<br/>
+            <b>优先级：</b>选配<br/>
+            <b>路线组合：</b>Route E<br/>
+            <b>建议：</b>只适合周末；很大很热，别安排在疲劳日。<br/>
+            <b>坐标：</b>13.799600, 100.550100<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>100.550100,13.799600,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>King Power Mahanakhon SkyWalk</name>
+<styleUrl>#optionalStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>曼谷 Bangkok<br/>
+            <b>类别：</b>高空/夜景<br/>
+            <b>优先级：</b>选配<br/>
+            <b>路线组合：</b>Route E<br/>
+            <b>建议：</b>天气晴时适合日落/夜景；下雨或雾霾时性价比下降。<br/>
+            <b>坐标：</b>13.724900, 100.529400<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>100.529400,13.724900,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>四面佛 Erawan Shrine</name>
+<styleUrl>#optionalStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>曼谷 Bangkok<br/>
+            <b>类别：</b>地标/祈福<br/>
+            <b>优先级：</b>选配<br/>
+            <b>路线组合：</b>Route B<br/>
+            <b>建议：</b>CentralWorld/Siam 附近顺路短停，不建议专门绕路。<br/>
+            <b>坐标：</b>13.744300, 100.540400<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>100.540400,13.744300,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>曼谷艺术文化中心 BACC</name>
+<styleUrl>#optionalStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>曼谷 Bangkok<br/>
+            <b>类别：</b>室内/艺术<br/>
+            <b>优先级：</b>选配<br/>
+            <b>路线组合：</b>Route B/E<br/>
+            <b>建议：</b>雨天备选，靠近 Siam/MBK。<br/>
+            <b>坐标：</b>13.746600, 100.530000<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>100.530000,13.746600,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>金山寺 Wat Saket / Golden Mount</name>
+<styleUrl>#optionalStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>曼谷 Bangkok<br/>
+            <b>类别：</b>寺庙/城市景观<br/>
+            <b>优先级：</b>选配<br/>
+            <b>路线组合：</b>Route E<br/>
+            <b>建议：</b>老城备选，天气好时可看城市视角。<br/>
+            <b>坐标：</b>13.753900, 100.506600<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>100.506600,13.753900,0</coordinates></Point>
+</Placemark>
+</Folder>
+<Folder><name>交通</name>
+<Placemark>
+<name>Ratchawong Pier</name>
+<styleUrl>#transportStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>曼谷 Bangkok<br/>
+            <b>类别：</b>码头/交通<br/>
+            <b>优先级：</b>交通<br/>
+            <b>路线组合：</b>Route C<br/>
+            <b>建议：</b>唐人街附近码头，可用于坐船去 ICONSIAM/河边区域；出发前确认船线。<br/>
+            <b>坐标：</b>13.738900, 100.505400<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>100.505400,13.738900,0</coordinates></Point>
+</Placemark>
+</Folder>
+<Folder><name>远程</name>
+<Placemark>
+<name>三象神博物馆 Erawan Museum</name>
+<styleUrl>#remoteStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>曼谷 Bangkok<br/>
+            <b>类别：</b>远郊/拍照<br/>
+            <b>优先级：</b>远程<br/>
+            <b>路线组合：</b>Route E<br/>
+            <b>建议：</b>远离市中心，作为远郊拍照点可选；不建议和老城核心同天硬塞。<br/>
+            <b>坐标：</b>13.628800, 100.589900<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>100.589900,13.628800,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Ayutthaya Historical Park</name>
+<styleUrl>#remoteStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>曼谷 Bangkok<br/>
+            <b>类别：</b>远郊/一日游<br/>
+            <b>优先级：</b>远程<br/>
+            <b>路线组合：</b>Route E<br/>
+            <b>建议：</b>如果喜欢历史/摄影可安排一日游；会占用完整一天。<br/>
+            <b>坐标：</b>14.355900, 100.568900<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>100.568900,14.355900,0</coordinates></Point>
+</Placemark>
+</Folder>
+<Folder><name>路线组合 / route lines</name>
+<Placemark>
+<name>Route A 老城寺庙 + 郑王庙日落</name>
+<styleUrl>#routeStyle</styleUrl>
+<LineString><tessellate>1</tessellate><coordinates>
+100.491300,13.750000,0 100.493000,13.746600,0 100.488900,13.743700,0 100.510100,13.726600,0
+</coordinates></LineString>
+</Placemark>
+<Placemark>
+<name>Route B Siam + CentralWorld + Chula</name>
+<styleUrl>#routeStyle</styleUrl>
+<LineString><tessellate>1</tessellate><coordinates>
+100.534900,13.746100,0 100.539200,13.746500,0 100.525300,13.740500,0
+</coordinates></LineString>
+</Placemark>
+<Placemark>
+<name>Route C Song Wat + 唐人街 + ICONSIAM</name>
+<styleUrl>#routeStyle</styleUrl>
+<LineString><tessellate>1</tessellate><coordinates>
+100.507200,13.741500,0 100.510000,13.739400,0 100.505400,13.738900,0 100.510100,13.726600,0
+</coordinates></LineString>
+</Placemark>
+<Placemark>
+<name>Route D 水门寺大佛 + 运河</name>
+<styleUrl>#routeStyle</styleUrl>
+<LineString><tessellate>1</tessellate><coordinates>
+100.462700,13.722900,0 100.460300,13.730500,0
+</coordinates></LineString>
+</Placemark>
+<Placemark>
+<name>Route E 高空/周末/远郊备选</name>
+<styleUrl>#routeStyle</styleUrl>
+<LineString><tessellate>1</tessellate><coordinates>
+100.550100,13.799600,0 100.529400,13.724900,0
+</coordinates></LineString>
+</Placemark>
+</Folder>
+</Folder>
+<Folder><name>普吉岛 Phuket</name><open>1</open>
+<Folder><name>核心</name>
+<Placemark>
+<name>普吉镇老街 Phuket Old Town / Thalang Road</name>
+<styleUrl>#coreStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>普吉岛 Phuket<br/>
+            <b>类别：</b>老街/摄影<br/>
+            <b>优先级：</b>核心<br/>
+            <b>路线组合：</b>Route A<br/>
+            <b>建议：</b>彩色骑楼、咖啡、壁画；适合 2–4 小时慢逛。<br/>
+            <b>坐标：</b>7.884000, 98.389000<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.389000,7.884000,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Lard Yai Sunday Walking Street</name>
+<styleUrl>#coreStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>普吉岛 Phuket<br/>
+            <b>类别：</b>夜市<br/>
+            <b>优先级：</b>核心<br/>
+            <b>路线组合：</b>Route A<br/>
+            <b>建议：</b>周日夜市；你们 8/16 正好周日，优先保留。<br/>
+            <b>坐标：</b>7.884500, 98.388000<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.388000,7.884500,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Soi Romanee</name>
+<styleUrl>#coreStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>普吉岛 Phuket<br/>
+            <b>类别：</b>老街/摄影<br/>
+            <b>优先级：</b>核心<br/>
+            <b>路线组合：</b>Route A<br/>
+            <b>建议：</b>普吉老街最适合拍照的小巷之一，可与 Thalang Road 同走。<br/>
+            <b>坐标：</b>7.884700, 98.389700<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.389700,7.884700,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>查龙寺 Wat Chalong</name>
+<styleUrl>#coreStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>普吉岛 Phuket<br/>
+            <b>类别：</b>寺庙/文化<br/>
+            <b>优先级：</b>核心<br/>
+            <b>路线组合：</b>Route B<br/>
+            <b>建议：</b>普吉最代表性寺庙之一；遮肩遮膝。<br/>
+            <b>坐标：</b>7.846000, 98.337000<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.337000,7.846000,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Karon Viewpoint</name>
+<styleUrl>#coreStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>普吉岛 Phuket<br/>
+            <b>类别：</b>观景台<br/>
+            <b>优先级：</b>核心<br/>
+            <b>路线组合：</b>Route B/C<br/>
+            <b>建议：</b>三海滩视角，短停拍照性价比高。<br/>
+            <b>坐标：</b>7.796600, 98.306800<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.306800,7.796600,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Nai Harn Beach</name>
+<styleUrl>#coreStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>普吉岛 Phuket<br/>
+            <b>类别：</b>海滩<br/>
+            <b>优先级：</b>核心<br/>
+            <b>路线组合：</b>Route C<br/>
+            <b>建议：</b>南部更松弛，情侣感强；红旗不要下水。<br/>
+            <b>坐标：</b>7.775200, 98.306700<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.306700,7.775200,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Ya Nui Beach</name>
+<styleUrl>#coreStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>普吉岛 Phuket<br/>
+            <b>类别：</b>海滩/拍照<br/>
+            <b>优先级：</b>核心<br/>
+            <b>路线组合：</b>Route C<br/>
+            <b>建议：</b>小海湾，适合短停拍照；看浪况。<br/>
+            <b>坐标：</b>7.766000, 98.306400<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.306400,7.766000,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Promthep Cape 神仙半岛</name>
+<styleUrl>#coreStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>普吉岛 Phuket<br/>
+            <b>类别：</b>日落/观景<br/>
+            <b>优先级：</b>核心<br/>
+            <b>路线组合：</b>Route B/C<br/>
+            <b>建议：</b>经典日落点；提前 45–60 分钟到。<br/>
+            <b>坐标：</b>7.762200, 98.305100<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.305100,7.762200,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Rawai Seafood Market</name>
+<styleUrl>#coreStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>普吉岛 Phuket<br/>
+            <b>类别：</b>海鲜/晚餐<br/>
+            <b>优先级：</b>核心<br/>
+            <b>路线组合：</b>Route C<br/>
+            <b>建议：</b>现买现加工；先问清每公斤价、加工费和总价。<br/>
+            <b>坐标：</b>7.775000, 98.329000<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.329000,7.775000,0</coordinates></Point>
+</Placemark>
+</Folder>
+<Folder><name>选配</name>
+<Placemark>
+<name>普吉大佛 Big Buddha</name>
+<styleUrl>#optionalStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>普吉岛 Phuket<br/>
+            <b>类别：</b>地标/观景<br/>
+            <b>优先级：</b>选配<br/>
+            <b>路线组合：</b>Route B<br/>
+            <b>建议：</b>开放和上山路况需临近确认；不要为了它牺牲核心节奏。<br/>
+            <b>坐标：</b>7.827600, 98.312800<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.312800,7.827600,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Kata Beach</name>
+<styleUrl>#optionalStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>普吉岛 Phuket<br/>
+            <b>类别：</b>海滩<br/>
+            <b>优先级：</b>选配<br/>
+            <b>路线组合：</b>Route C<br/>
+            <b>建议：</b>西海岸经典海滩；8月注意浪和红旗。<br/>
+            <b>坐标：</b>7.821400, 98.299300<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.299300,7.821400,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Karon Beach</name>
+<styleUrl>#optionalStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>普吉岛 Phuket<br/>
+            <b>类别：</b>海滩<br/>
+            <b>优先级：</b>选配<br/>
+            <b>路线组合：</b>Route C<br/>
+            <b>建议：</b>适合散步和看海；雨季不一定适合下水。<br/>
+            <b>坐标：</b>7.842300, 98.294100<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.294100,7.842300,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Mai Khao Plane Spotting Beach</name>
+<styleUrl>#optionalStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>普吉岛 Phuket<br/>
+            <b>类别：</b>飞机海滩<br/>
+            <b>优先级：</b>选配<br/>
+            <b>路线组合：</b>Route E<br/>
+            <b>建议：</b>住机场附近时顺路；看风向，不保证低空降落。<br/>
+            <b>坐标：</b>8.154000, 98.298000<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.298000,8.154000,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Phuket Elephant Sanctuary</name>
+<styleUrl>#optionalStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>普吉岛 Phuket<br/>
+            <b>类别：</b>动物保护/雨天备选<br/>
+            <b>优先级：</b>选配<br/>
+            <b>路线组合：</b>Route E<br/>
+            <b>建议：</b>优先 no riding、观察/教育型项目，避免骑象/表演。<br/>
+            <b>坐标：</b>8.036000, 98.390000<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.390000,8.036000,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Central Phuket</name>
+<styleUrl>#optionalStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>普吉岛 Phuket<br/>
+            <b>类别：</b>商场/雨天<br/>
+            <b>优先级：</b>选配<br/>
+            <b>路线组合：</b>Route E<br/>
+            <b>建议：</b>雨天、补给、简单吃饭的室内备选。<br/>
+            <b>坐标：</b>7.891500, 98.368200<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.368200,7.891500,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Chillva Market</name>
+<styleUrl>#optionalStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>普吉岛 Phuket<br/>
+            <b>类别：</b>夜市<br/>
+            <b>优先级：</b>选配<br/>
+            <b>路线组合：</b>Route E<br/>
+            <b>建议：</b>普吉夜市备选，适合轻松吃喝。<br/>
+            <b>坐标：</b>7.917400, 98.368800<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.368800,7.917400,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Naka Weekend Market</name>
+<styleUrl>#optionalStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>普吉岛 Phuket<br/>
+            <b>类别：</b>夜市/市场<br/>
+            <b>优先级：</b>选配<br/>
+            <b>路线组合：</b>Route E<br/>
+            <b>建议：</b>周末市场备选；根据时间和体力决定。<br/>
+            <b>坐标：</b>7.880600, 98.366000<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.366000,7.880600,0</coordinates></Point>
+</Placemark>
+</Folder>
+<Folder><name>交通</name>
+<Placemark>
+<name>Ao Po Grand Marina</name>
+<styleUrl>#transportStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>普吉岛 Phuket<br/>
+            <b>类别：</b>码头/转船<br/>
+            <b>优先级：</b>交通<br/>
+            <b>路线组合：</b>Transfer<br/>
+            <b>建议：</b>18 Aug 去 Santhiya 的关键码头；提前确认司机和船班。<br/>
+            <b>坐标：</b>8.067000, 98.445000<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.445000,8.067000,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>HKT Phuket International Airport</name>
+<styleUrl>#transportStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>普吉岛 Phuket<br/>
+            <b>类别：</b>机场/交通<br/>
+            <b>优先级：</b>交通<br/>
+            <b>路线组合：</b>Transfer<br/>
+            <b>建议：</b>15 Aug 抵达、23 Aug 出发；最后一晚住附近降低风险。<br/>
+            <b>坐标：</b>8.113000, 98.317000<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.317000,8.113000,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Nai Yang Beach / Dewa area</name>
+<styleUrl>#transportStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>普吉岛 Phuket<br/>
+            <b>类别：</b>机场缓冲/海滩<br/>
+            <b>优先级：</b>交通<br/>
+            <b>路线组合：</b>Final night<br/>
+            <b>建议：</b>22–23 Aug 机场缓冲夜区域；适合散步、早睡、返程。<br/>
+            <b>坐标：</b>8.091500, 98.300700<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.300700,8.091500,0</coordinates></Point>
+</Placemark>
+</Folder>
+<Folder><name>远程</name>
+<Placemark>
+<name>Phang Nga Bay / James Bond Island direction</name>
+<styleUrl>#remoteStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>普吉岛 Phuket<br/>
+            <b>类别：</b>出海/远程<br/>
+            <b>优先级：</b>远程<br/>
+            <b>路线组合：</b>Route D<br/>
+            <b>建议：</b>雨季相对更稳的景观型出海；必须可取消。<br/>
+            <b>坐标：</b>8.274500, 98.501600<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.501600,8.274500,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Phi Phi Islands / Maya Bay direction</name>
+<styleUrl>#remoteStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>普吉岛 Phuket<br/>
+            <b>类别：</b>出海/远程<br/>
+            <b>优先级：</b>远程<br/>
+            <b>路线组合：</b>Route D<br/>
+            <b>建议：</b>经典但船程长、人多、雨季颠簸风险更高。<br/>
+            <b>坐标：</b>7.678800, 98.765300<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.765300,7.678800,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Racha Yai Island</name>
+<styleUrl>#remoteStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>普吉岛 Phuket<br/>
+            <b>类别：</b>出海/远程<br/>
+            <b>优先级：</b>远程<br/>
+            <b>路线组合：</b>Route D<br/>
+            <b>建议：</b>浮潜/水上项目备选；仍看海况。<br/>
+            <b>坐标：</b>7.604000, 98.371000<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.371000,7.604000,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Coral Island / Koh Hae</name>
+<styleUrl>#remoteStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>普吉岛 Phuket<br/>
+            <b>类别：</b>出海/远程<br/>
+            <b>优先级：</b>远程<br/>
+            <b>路线组合：</b>Route D<br/>
+            <b>建议：</b>离普吉较近的出海备选；雨季仍需确认浪况。<br/>
+            <b>坐标：</b>7.745000, 98.373000<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.373000,7.745000,0</coordinates></Point>
+</Placemark>
+</Folder>
+<Folder><name>谨慎</name>
+<Placemark>
+<name>Patong / Bangla Road</name>
+<styleUrl>#cautionStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>普吉岛 Phuket<br/>
+            <b>类别：</b>夜生活<br/>
+            <b>优先级：</b>谨慎<br/>
+            <b>路线组合：</b>Optional<br/>
+            <b>建议：</b>很热闹但吵，情侣浪漫度一般；不建议作为住宿核心。<br/>
+            <b>坐标：</b>7.895700, 98.296500<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.296500,7.895700,0</coordinates></Point>
+</Placemark>
+</Folder>
+<Folder><name>路线组合 / route lines</name>
+<Placemark>
+<name>Route A 普吉老街 + 周日夜市</name>
+<styleUrl>#routeStyle</styleUrl>
+<LineString><tessellate>1</tessellate><coordinates>
+98.389000,7.884000,0 98.389700,7.884700,0 98.388000,7.884500,0
+</coordinates></LineString>
+</Placemark>
+<Placemark>
+<name>Route B 查龙寺 + 观景台 + 神仙半岛</name>
+<styleUrl>#routeStyle</styleUrl>
+<LineString><tessellate>1</tessellate><coordinates>
+98.337000,7.846000,0 98.312800,7.827600,0 98.306800,7.796600,0 98.305100,7.762200,0
+</coordinates></LineString>
+</Placemark>
+<Placemark>
+<name>Route C 南部海滩 + 拉威海鲜</name>
+<styleUrl>#routeStyle</styleUrl>
+<LineString><tessellate>1</tessellate><coordinates>
+98.299300,7.821400,0 98.306800,7.796600,0 98.306700,7.775200,0 98.306400,7.766000,0 98.329000,7.775000,0 98.305100,7.762200,0
+</coordinates></LineString>
+</Placemark>
+<Placemark>
+<name>Route D 出海方向参考</name>
+<styleUrl>#routeStyle</styleUrl>
+<LineString><tessellate>1</tessellate><coordinates>
+98.445000,8.067000,0 98.501600,8.274500,0
+</coordinates></LineString>
+</Placemark>
+</Folder>
+</Folder>
+<Folder><name>瑶亚岛 Koh Yao Yai / Santhiya</name><open>1</open>
+<Folder><name>核心</name>
+<Placemark>
+<name>Santhiya Koh Yao Yai Resort &amp; Spa / Loh Pared Bay</name>
+<styleUrl>#coreStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>瑶亚岛 Koh Yao Yai / Santhiya<br/>
+            <b>类别：</b>酒店/度假核心<br/>
+            <b>优先级：</b>核心<br/>
+            <b>路线组合：</b>Route A<br/>
+            <b>建议：</b>18–22 Aug 四晚度假核心：泳池、海景、SPA、七夕晚餐和日落。<br/>
+            <b>坐标：</b>7.983000, 98.579000<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.579000,7.983000,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Loh Pared Beach / Bay</name>
+<styleUrl>#coreStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>瑶亚岛 Koh Yao Yai / Santhiya<br/>
+            <b>类别：</b>海滩/日落<br/>
+            <b>优先级：</b>核心<br/>
+            <b>路线组合：</b>Route A<br/>
+            <b>建议：</b>Santhiya 周边海湾；适合慢节奏散步和日落。<br/>
+            <b>坐标：</b>7.980800, 98.578500<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.578500,7.980800,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Laem Haad Sandbar</name>
+<styleUrl>#coreStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>瑶亚岛 Koh Yao Yai / Santhiya<br/>
+            <b>类别：</b>沙洲/拍照<br/>
+            <b>优先级：</b>核心<br/>
+            <b>路线组合：</b>Route B<br/>
+            <b>建议：</b>瑶亚岛代表性拍照点；看潮汐，低潮更好。<br/>
+            <b>坐标：</b>8.106000, 98.607000<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.607000,8.106000,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Prunai / local village area</name>
+<styleUrl>#coreStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>瑶亚岛 Koh Yao Yai / Santhiya<br/>
+            <b>类别：</b>村落/本地生活<br/>
+            <b>优先级：</b>核心<br/>
+            <b>路线组合：</b>Route C<br/>
+            <b>建议：</b>岛内轻量环线可经过；看村落、橡胶园和本地生活。<br/>
+            <b>坐标：</b>7.946000, 98.584000<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.584000,7.946000,0</coordinates></Point>
+</Placemark>
+</Folder>
+<Folder><name>选配</name>
+<Placemark>
+<name>Loh Jak Pier / sunset area</name>
+<styleUrl>#optionalStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>瑶亚岛 Koh Yao Yai / Santhiya<br/>
+            <b>类别：</b>码头/日落<br/>
+            <b>优先级：</b>选配<br/>
+            <b>路线组合：</b>Route C<br/>
+            <b>建议：</b>南部/西海岸轻量路线的日落参考点。<br/>
+            <b>坐标：</b>7.913000, 98.586000<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.586000,7.913000,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Ao Muong / southern bay</name>
+<styleUrl>#optionalStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>瑶亚岛 Koh Yao Yai / Santhiya<br/>
+            <b>类别：</b>海湾/选配<br/>
+            <b>优先级：</b>选配<br/>
+            <b>路线组合：</b>Route C<br/>
+            <b>建议：</b>南部海湾选配；不用为环全岛硬塞。<br/>
+            <b>坐标：</b>7.895000, 98.602000<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.602000,7.895000,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Koh Yao Noi / Manoh Pier direction</name>
+<styleUrl>#optionalStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>瑶亚岛 Koh Yao Yai / Santhiya<br/>
+            <b>类别：</b>邻岛方向<br/>
+            <b>优先级：</b>选配<br/>
+            <b>路线组合：</b>Optional<br/>
+            <b>建议：</b>可作为邻岛方向参考；你们四晚主轴仍建议留在 Santhiya/瑶亚岛。<br/>
+            <b>坐标：</b>8.150000, 98.625000<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.625000,8.150000,0</coordinates></Point>
+</Placemark>
+</Folder>
+<Folder><name>交通</name>
+<Placemark>
+<name>Laem Yai / Santhiya Pier area</name>
+<styleUrl>#transportStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>瑶亚岛 Koh Yao Yai / Santhiya<br/>
+            <b>类别：</b>码头/交通<br/>
+            <b>优先级：</b>交通<br/>
+            <b>路线组合：</b>Transfer<br/>
+            <b>建议：</b>Santhiya 周边码头区域；具体上下船点以酒店通知为准。<br/>
+            <b>坐标：</b>7.980000, 98.573000<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.573000,7.980000,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Chong Lard Pier</name>
+<styleUrl>#transportStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>瑶亚岛 Koh Yao Yai / Santhiya<br/>
+            <b>类别：</b>码头/交通<br/>
+            <b>优先级：</b>交通<br/>
+            <b>路线组合：</b>Route B/C<br/>
+            <b>建议：</b>北部码头，可作为 Laem Haad/岛内路线参考点。<br/>
+            <b>坐标：</b>8.073000, 98.600500<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.600500,8.073000,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Khlong Hia Pier</name>
+<styleUrl>#transportStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>瑶亚岛 Koh Yao Yai / Santhiya<br/>
+            <b>类别：</b>码头/交通<br/>
+            <b>优先级：</b>交通<br/>
+            <b>路线组合：</b>Route B/C<br/>
+            <b>建议：</b>北部码头，具体转乘以酒店/当地司机确认。<br/>
+            <b>坐标：</b>8.098000, 98.594000<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.594000,8.098000,0</coordinates></Point>
+</Placemark>
+</Folder>
+<Folder><name>远程</name>
+<Placemark>
+<name>Hong Islands direction</name>
+<styleUrl>#remoteStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>瑶亚岛 Koh Yao Yai / Santhiya<br/>
+            <b>类别：</b>私人船/远程<br/>
+            <b>优先级：</b>远程<br/>
+            <b>路线组合：</b>Route D<br/>
+            <b>建议：</b>天气稳定、可取消时才考虑私人船；不要放在离岛前一天。<br/>
+            <b>坐标：</b>8.220300, 98.674100<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.674100,8.220300,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Phang Nga Bay direction from Koh Yao Yai</name>
+<styleUrl>#remoteStyle</styleUrl>
+<description><![CDATA[
+            <b>区域：</b>瑶亚岛 Koh Yao Yai / Santhiya<br/>
+            <b>类别：</b>私人船/远程<br/>
+            <b>优先级：</b>远程<br/>
+            <b>路线组合：</b>Route D<br/>
+            <b>建议：</b>私人船/攀牙湾方向参考点；8月以海况为准。<br/>
+            <b>坐标：</b>8.274500, 98.501600<br/>
+            <i>提示：Google Earth 中用于规划分布；具体入口/码头/开放状态出发前再确认。</i>
+            ]]></description>
+<Point><coordinates>98.501600,8.274500,0</coordinates></Point>
+</Placemark>
+</Folder>
+<Folder><name>路线组合 / route lines</name>
+<Placemark>
+<name>Route A Santhiya 度假核心</name>
+<styleUrl>#routeStyle</styleUrl>
+<LineString><tessellate>1</tessellate><coordinates>
+98.579000,7.983000,0 98.578500,7.980800,0
+</coordinates></LineString>
+</Placemark>
+<Placemark>
+<name>Route B Laem Haad 沙洲半日</name>
+<styleUrl>#routeStyle</styleUrl>
+<LineString><tessellate>1</tessellate><coordinates>
+98.579000,7.983000,0 98.607000,8.106000,0 98.600500,8.073000,0
+</coordinates></LineString>
+</Placemark>
+<Placemark>
+<name>Route C 岛内轻量环线</name>
+<styleUrl>#routeStyle</styleUrl>
+<LineString><tessellate>1</tessellate><coordinates>
+98.579000,7.983000,0 98.584000,7.946000,0 98.586000,7.913000,0 98.602000,7.895000,0
+</coordinates></LineString>
+</Placemark>
+<Placemark>
+<name>Route D 私人船方向</name>
+<styleUrl>#routeStyle</styleUrl>
+<LineString><tessellate>1</tessellate><coordinates>
+98.579000,7.983000,0 98.674100,8.220300,0
+</coordinates></LineString>
+</Placemark>
+</Folder>
+</Folder>
+</Document></kml>
