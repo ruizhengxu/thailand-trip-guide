@@ -51,6 +51,7 @@ export default {
         'pop-in': 'popIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards',
         'pop-out': 'popOut 0.2s cubic-bezier(0.4, 0, 1, 1) forwards',
         'pulse-subtle': 'pulseSubtle 3s infinite ease-in-out',
+        'pop-digit': 'popDigit 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards',
       },
       keyframes: {
         fadeIn: {
@@ -80,6 +81,10 @@ export default {
         pulseSubtle: {
           '0%, 100%': { opacity: '1', transform: 'scale(1)' },
           '50%': { opacity: '0.85', transform: 'scale(1.03)' },
+        },
+        popDigit: {
+          '0%': { transform: 'scale(1.15)', filter: 'brightness(1.4)' },
+          '100%': { transform: 'scale(1)', filter: 'brightness(1)' },
         },
       },
     },
