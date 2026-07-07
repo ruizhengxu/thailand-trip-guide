@@ -7,7 +7,7 @@ interface ExternalMapButtonProps {
   place: Place;
   type?: "search" | "directions";
   className?: string;
-  variant?: "primary" | "secondary" | "outline" | "compact";
+  variant?: "primary" | "secondary" | "outline" | "compact" | "icon";
   label?: string;
 }
 
@@ -33,6 +33,8 @@ export const ExternalMapButton: React.FC<ExternalMapButtonProps> = ({
       "border border-line/80 bg-card hover:bg-sand/30 text-text px-3.5 py-2 rounded-xl text-xs font-medium flex items-center justify-center gap-1.5 transition-all duration-200",
     compact:
       "text-teal hover:text-teal-light underline underline-offset-2 text-xs font-medium inline-flex items-center gap-1 transition-colors",
+    icon:
+      "w-7 h-7 rounded-full bg-card hover:bg-sand/40 text-muted hover:text-teal border border-line/60 flex items-center justify-center transition-all duration-200 shadow-xs",
   };
 
   const Icon = type === "directions" ? Navigation : ExternalLink;
@@ -45,9 +47,10 @@ export const ExternalMapButton: React.FC<ExternalMapButtonProps> = ({
       onClick={(e) => e.stopPropagation()}
       className={`${variantClasses[variant]} ${className}`}
       title={displayLabel}
+      aria-label={displayLabel}
     >
-      <Icon className="w-3.5 h-3.5 flex-shrink-0" />
-      <span>{displayLabel}</span>
+      <Icon className={variant === "icon" ? "w-3.5 h-3.5" : "w-3.5 h-3.5 flex-shrink-0"} />
+      {variant !== "icon" && <span>{displayLabel}</span>}
     </a>
   );
 };

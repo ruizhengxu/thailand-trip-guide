@@ -181,20 +181,20 @@ export const RouteCard: React.FC<RouteCardProps> = ({
                     <span className="w-6 h-6 rounded-full bg-teal/15 text-teal font-mono text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
                       {idx + 1}
                     </span>
-                    <div className="min-w-0">
+                    <div className="min-w-0 flex-1">
                       <div className="flex items-center gap-2 flex-wrap">
-                        <h5 className="font-bold text-sm text-text truncate">
+                        <h5 className="font-bold text-sm text-text leading-snug">
                           {item.displayName || item.nameZh}
                         </h5>
                         <PriorityBadge priority={item.priority} size="sm" showDot={false} />
                       </div>
-                      <p className="text-xs text-muted truncate mt-0.5">
-                        {item.category} · {item.shortDescription}
+                      <p className="text-xs text-muted mt-1 leading-relaxed">
+                        <span className="font-medium text-text/80">{item.category}</span> · {item.shortDescription}
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-1.5 flex-shrink-0">
+                  <div className="flex items-center gap-1.5 flex-shrink-0 mt-0.5">
                     {onToggleVisited && (
                       <CheckInButton
                         isVisited={visited.includes(item.id)}
@@ -207,7 +207,7 @@ export const RouteCard: React.FC<RouteCardProps> = ({
                       onToggle={(e) => onToggleFavorite(item.id, e)}
                       size="sm"
                     />
-                    <ExternalMapButton place={item} type="search" variant="outline" />
+                    <ExternalMapButton place={item} type="search" variant="icon" />
                   </div>
                 </div>
               ))}
