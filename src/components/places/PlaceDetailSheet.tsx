@@ -177,12 +177,12 @@ export const PlaceDetailSheet: React.FC<PlaceDetailSheetProps> = ({
             )}
           </div>
 
-          {/* Background / Wiki Introduction */}
+          {/* Background / Wiki / Core Highlights */}
           {(placeDescriptions[activePlace.id] || activePlace.description) && (
             <div className="p-4 sm:p-5 rounded-2xl bg-teal/10 border border-teal/20 text-text space-y-2 shadow-xs">
               <div className="flex items-center gap-2 text-teal font-bold text-xs sm:text-sm uppercase tracking-wider">
                 <BookOpen className="w-4 h-4 flex-shrink-0" />
-                <span>景点背景与百科 · About</span>
+                <span>景点背景与核心特色 · About & Highlights</span>
               </div>
               <p className="text-sm sm:text-base text-text leading-relaxed font-normal">
                 {placeDescriptions[activePlace.id] || activePlace.description}
@@ -190,15 +190,19 @@ export const PlaceDetailSheet: React.FC<PlaceDetailSheetProps> = ({
             </div>
           )}
 
-          {/* Short Description */}
-          <div>
-            <h3 className="text-sm font-bold text-muted uppercase tracking-wider mb-2">
-              核心特点 · Overview
-            </h3>
-            <p className="text-base text-text leading-relaxed font-medium">
-              {activePlace.shortDescription}
-            </p>
-          </div>
+          {/* Short Description (Only display if NOT duplicate of notes and no detailed wiki description exists) */}
+          {activePlace.shortDescription &&
+            !placeDescriptions[activePlace.id] &&
+            (!activePlace.notes || !activePlace.notes.includes(activePlace.shortDescription)) && (
+              <div>
+                <h3 className="text-sm font-bold text-muted uppercase tracking-wider mb-2">
+                  核心特点 · Overview
+                </h3>
+                <p className="text-base text-text leading-relaxed font-medium">
+                  {activePlace.shortDescription}
+                </p>
+              </div>
+            )}
 
           {/* Notes & Tips */}
           {activePlace.notes && activePlace.notes.length > 0 && (
