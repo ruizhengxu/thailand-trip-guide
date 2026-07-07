@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { notes } from "../../data/notes";
 import { WeatherNoteCard } from "./WeatherNoteCard";
+import { subscribeToPackingList, savePackingListToCloud } from "../../utils/firebase";
 import {
   CheckSquare,
   Luggage,
@@ -11,27 +12,104 @@ import {
 
 export const PrepGuideView: React.FC = () => {
   const packingItems = [
-    { id: "p-1", label: "护照、复印件及二寸近期证件照（防备用）", category: "证件与财务" },
-    { id: "p-2", label: "境外医疗与旅游意外险保单（电子与纸质）", category: "证件与财务" },
-    { id: "p-3", label: "酒店预订确认单（Santhiya 等需出示船班对接）", category: "证件与财务" },
-    { id: "p-4", label: "Visa / Master 信用卡及少量泰铢现金（付小费/夜市）", category: "证件与财务" },
-    { id: "p-5", label: "大皇宫 / 郑王庙等寺庙长裤或过膝长裙（严禁短裤露肩）", category: "着装与防晒" },
-    { id: "p-6", label: "高倍防水防晒霜、晒后修复芦荟胶、太阳镜、遮阳帽", category: "着装与防晒" },
-    { id: "p-7", label: "七夕浪漫晚餐稍正式情侣礼服与平底便携凉鞋", category: "着装与防晒" },
-    { id: "p-8", label: "出海专用防水袋、手机防水套、快干沙滩毛巾", category: "装备与药品" },
-    { id: "p-9", label: "便携折叠雨伞或轻便防水风衣（应对 8 月下午阵雨）", category: "装备与药品" },
-    { id: "p-10", label: "晕船药（普吉/瑶亚岛快艇必备）、泰康药油、防蚊液", category: "装备与药品" },
-    { id: "p-11", label: "英标 / 欧标转换插头、充电宝及高速境外流量卡/eSIM", category: "装备与药品" },
+    // 1. 🪪 证件与财务
+    { id: "p-1", label: "护照原件及复印件（建议手机相册留存首页电子备份）", category: "🪪 证件与财务" },
+    { id: "p-2", label: "境外医疗与旅游意外险保单（电子版英文确认单，建议存线下 PDF）", category: "🪪 证件与财务" },
+    { id: "p-3", label: "酒店预订确认单（尤其是 Santhiya 岛屿接驳需要向码头出示凭证）", category: "🪪 证件与财务" },
+    { id: "p-4", label: "国际信用卡 (Visa/Master，建议带不同银行两张) 及少量泰铢现金 (付夜市/小费)", category: "🪪 证件与财务" },
+    { id: "p-5", label: "中国大陆驾照及国际翻译件（如果在普吉或瑶亚岛有租车或骑小电驴打算）", category: "🪪 证件与财务" },
+
+    // 2. 👕 衣服与鞋履 (已去掉七夕礼服，注重舒适与防晒)
+    { id: "p-6", label: "寺庙合规着装：长裤或过膝长裙、有袖上衣（大皇宫/郑王庙严禁背心短裤露肩）", category: "👕 衣服与鞋履" },
+    { id: "p-7", label: "夏季透气换洗衣物：T恤、短裤、快干衣（泰国湿热衣服干得慢，建议多备两套）", category: "👕 衣服与鞋履" },
+    { id: "p-8", label: "海岛度假泳装：建议准备 2-3 套泳衣（出海快艇与度假村无边泳池轮换拍照与穿着）", category: "👕 衣服与鞋履" },
+    { id: "p-9", label: "鞋履搭配：舒适好走路的运动鞋（逛商圈寺庙）+ 防滑涉水沙滩拖鞋（海岛酒店与跳岛）", category: "👕 衣服与鞋履" },
+    { id: "p-10", label: "轻薄空调衫/防晒衣（商场、BTS地铁、机场冷气极足，室内外温差大极为容易感冒）", category: "👕 衣服与鞋履" },
+
+    // 3. ☀️ 防晒与洗护 (单独独立分类)
+    { id: "p-11", label: "高倍防水防晒霜 (SPF50+ PA++++，出海快艇及海滩无遮挡极易严重晒伤)", category: "☀️ 防晒与洗护" },
+    { id: "p-12", label: "晒后修复芦荟胶（晚间回到酒店厚敷，有效缓解海风与强烈紫外线灼伤）", category: "☀️ 防晒与洗护" },
+    { id: "p-13", label: "墨镜（偏光防强光拍片神器）及宽檐沙滩遮阳帽", category: "☀️ 防晒与洗护" },
+    { id: "p-14", label: "便携护发精油或护发素（海水浸泡与海风吹拂后头发极易干枯打结，酒店洗发水较干）", category: "☀️ 防晒与洗护" },
+    { id: "p-15", label: "个人洗漱包及旅行洗面奶（部分环保度假村不提供一次性牙刷牙膏，需自备）", category: "☀️ 防晒与洗护" },
+
+    // 4. 🔌 电子电器与通讯
+    { id: "p-16", label: "泰国高速流量卡 / eSIM 卡（确保落地曼谷即开通上网，建议开启双卡）", category: "🔌 电子电器与通讯" },
+    { id: "p-17", label: "大容量充电宝及数据线（长时间导航拍照耗电极快，充电宝机身必须有清晰毫安时标识）", category: "🔌 电子电器与通讯" },
+    { id: "p-18", label: "转换插头与多口快充头（泰国大多兼容两脚扁插，但三脚需转换器，多设备充电需多口快充）", category: "🔌 电子电器与通讯" },
+    { id: "p-19", label: "手机防水套 / 出海专属防水袋（8月出海快艇颠簸易起水花，保护手机与充电宝安全）", category: "🔌 电子电器与通讯" },
+
+    // 5. 💊 常备药品与防护
+    { id: "p-20", label: "晕船药及贴片（普吉岛到瑶亚岛、跳岛游搭乘快艇风浪较大必备，提前半小时吃）", category: "💊 常备药品与防护" },
+    { id: "p-21", label: "热带高效防蚊液 / 青草药膏（8月雨季海岛户外蚊虫较多，防叮咬与止痒）", category: "💊 常备药品与防护" },
+    { id: "p-22", label: "肠胃止泻药与蒙脱石散（夜市海鲜、冰镇饮品及异国水土不服应急必备救命药）", category: "💊 常备药品与防护" },
+    { id: "p-23", label: "感冒退烧药、消炎药及防水创可贴（室内外冷热交替防感冒、礁石划伤消毒应急）", category: "💊 常备药品与防护" },
+
+    // 6. 🌧️ 雨季与出行专属装备
+    { id: "p-24", label: "便携自动折叠雨伞或轻便防水风衣（8月雨季曼谷普吉午后常有强对流阵雨，来去快速）", category: "🌧️ 雨季与出行专属" },
+    { id: "p-25", label: "便携手持小风扇 / 挂脖风扇（曼谷街头与夜市高湿闷热，降温舒适度大幅提升）", category: "🌧️ 雨季与出行专属" },
+    { id: "p-26", label: "消毒湿纸巾与纸巾（夜市摊位吃剥壳海鲜、擦拭桌椅餐具随时保持手部卫生）", category: "🌧️ 雨季与出行专属" },
   ];
 
-  const [checkedItems, setCheckedItems] = useState<Record<string, boolean>>({
+  const defaultChecked = {
     "p-1": true,
     "p-3": true,
-    "p-5": true,
+    "p-6": true,
+  };
+
+  const [checkedItems, setCheckedItems] = useState<Record<string, boolean>>(() => {
+    try {
+      const saved = localStorage.getItem("thailand_trip_packing");
+      if (saved) return JSON.parse(saved);
+    } catch (e) {
+      console.error("Failed to load local packing list", e);
+    }
+    return defaultChecked;
   });
 
+  useEffect(() => {
+    const initialPacking = (() => {
+      try {
+        const saved = localStorage.getItem("thailand_trip_packing");
+        return saved ? JSON.parse(saved) : defaultChecked;
+      } catch {
+        return defaultChecked;
+      }
+    })();
+
+    const unsubscribe = subscribeToPackingList((cloudPacking) => {
+      setCheckedItems(cloudPacking);
+    }, initialPacking);
+
+    return () => unsubscribe();
+  }, []);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem("thailand_trip_packing", JSON.stringify(checkedItems));
+    } catch (e) {
+      console.error("Failed to save local packing list", e);
+    }
+  }, [checkedItems]);
+
   const toggleCheck = (id: string) => {
-    setCheckedItems((prev) => ({ ...prev, [id]: !prev[id] }));
+    setCheckedItems((prev) => {
+      const next = { ...prev, [id]: !prev[id] };
+      savePackingListToCloud(next);
+      return next;
+    });
+  };
+
+  const handleToggleAll = () => {
+    const allChecked =
+      Object.keys(checkedItems).length === packingItems.length &&
+      Object.values(checkedItems).every(Boolean);
+    const next: Record<string, boolean> = {};
+    if (!allChecked) {
+      packingItems.forEach((i) => (next[i.id] = true));
+    }
+    setCheckedItems(next);
+    savePackingListToCloud(next);
   };
 
   const categories = Array.from(new Set(packingItems.map((i) => i.category)));
@@ -176,17 +254,7 @@ export const PrepGuideView: React.FC = () => {
             </p>
           </div>
           <button
-            onClick={() => {
-              const allChecked = Object.keys(checkedItems).length === packingItems.length &&
-                Object.values(checkedItems).every(Boolean);
-              if (allChecked) {
-                setCheckedItems({});
-              } else {
-                const next: Record<string, boolean> = {};
-                packingItems.forEach((i) => (next[i.id] = true));
-                setCheckedItems(next);
-              }
-            }}
+            onClick={handleToggleAll}
             className="btn-secondary text-xs py-2 px-3.5 self-start sm:self-auto"
           >
             {Object.keys(checkedItems).length === packingItems.length &&

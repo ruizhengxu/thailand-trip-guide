@@ -91,3 +91,41 @@ export async function saveVisitedToCloud(visited: string[]) {
     console.error("Failed to save visited to cloud:", error);
   }
 }
+
+export function subscribeToPackingList(
+  onUpdate: (packing: Record<string, boolean>) => void,
+  defaultPacking: Record<string, boolean>
+) {
+  const docRef = doc(db, FAVORITES_COLLECTION, FAVORITES_DOC);
+  
+  return onSnapshot(
+    docRef,
+    (docSnap) => {
+      if (docSnap.exists()) {
+        const data = docSnap.data();
+        if (data.packing && typeof data.packing === "object" && !Array.isArray(data.packing)) {
+          onUpdate(data.packing);
+        } else {
+          onUpdate(defaultPacking);
+        }
+      } else {
+        setDoc(docRef, { packing: defaultPacking }, { merge: true }).catch((err) => {
+          console.error("Failed to initialize cloud packing:", err);
+        });
+        onUpdate(defaultPacking);
+      }
+    },
+    (error) => {
+      console.error("Error listening to cloud packing:", error);
+    }
+  );
+}
+
+export async function savePackingListToCloud(packing: Record<string, boolean>) {
+  try {
+    const docRef = doc(db, FAVORITES_COLLECTION, FAVORITES_DOC);
+    await setDoc(docRef, { packing }, { merge: true });
+  } catch (error) {
+    console.error("Failed to save packing to cloud:", error);
+  }
+}
