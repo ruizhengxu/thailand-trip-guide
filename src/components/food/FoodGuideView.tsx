@@ -6,6 +6,8 @@ import { getAssetUrl } from "../../utils/images";
 import { RegionTabs } from "../ui/RegionTabs";
 import { FilterChips } from "../ui/FilterChips";
 import { PriorityBadge } from "../ui/PriorityBadge";
+import { FavoriteButton } from "../ui/FavoriteButton";
+import { CheckInButton } from "../ui/CheckInButton";
 import { RestaurantModal } from "./RestaurantModal";
 import {
   Utensils,
@@ -29,11 +31,19 @@ import {
 interface FoodGuideViewProps {
   initialRegion?: Region | "all";
   onViewRestaurantOnMap?: (restaurantId: string) => void;
+  favorites?: string[];
+  onToggleFavorite?: (id: string, e: React.MouseEvent) => void;
+  visited?: string[];
+  onToggleVisited?: (id: string, e: React.MouseEvent) => void;
 }
 
 export const FoodGuideView: React.FC<FoodGuideViewProps> = ({
   initialRegion = "all",
   onViewRestaurantOnMap,
+  favorites = [],
+  onToggleFavorite,
+  visited = [],
+  onToggleVisited,
 }) => {
   // Top view mode switcher: "dishes" vs "restaurants"
   const [viewMode, setViewMode] = useState<"dishes" | "restaurants">("dishes");
@@ -43,6 +53,8 @@ export const FoodGuideView: React.FC<FoodGuideViewProps> = ({
   const [selectedTypes, setSelectedTypes] = useState<FoodType[]>([]);
   const [selectedPriorities, setSelectedPriorities] = useState<FoodPriority[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
+  const [onlyFavorites, setOnlyFavorites] = useState(false);
+  const [onlyVisited, setOnlyVisited] = useState(false);
 
   // Modal state for viewing restaurant details
   const [selectedRestaurant, setSelectedRestaurant] = useState<Place | null>(null);
@@ -62,6 +74,8 @@ export const FoodGuideView: React.FC<FoodGuideViewProps> = ({
       if (selectedRegion !== "all" && item.region !== selectedRegion) return false;
       if (selectedTypes.length > 0 && !selectedTypes.includes(item.type)) return false;
       if (selectedPriorities.length > 0 && !selectedPriorities.includes(item.priority)) return false;
+      if (onlyFavorites && !favorites.includes(item.id)) return false;
+      if (onlyVisited && !visited.includes(item.id)) return false;
       if (searchQuery.trim() !== "") {
         const q = searchQuery.toLowerCase();
         const matchNameZh = item.nameZh.toLowerCase().includes(q);
@@ -72,12 +86,14 @@ export const FoodGuideView: React.FC<FoodGuideViewProps> = ({
       }
       return true;
     });
-  }, [selectedRegion, selectedTypes, selectedPriorities, searchQuery]);
+  }, [selectedRegion, selectedTypes, selectedPriorities, searchQuery, onlyFavorites, onlyVisited, favorites, visited]);
 
   // Filtered Restaurants (for the restaurants tab)
   const filteredRestaurants = useMemo(() => {
     return restaurants.filter((rest) => {
       if (selectedRegion !== "all" && rest.region !== selectedRegion) return false;
+      if (onlyFavorites && !favorites.includes(rest.id)) return false;
+      if (onlyVisited && !visited.includes(rest.id)) return false;
       if (searchQuery.trim() !== "") {
         const q = searchQuery.toLowerCase();
         const matchNameZh = rest.nameZh.toLowerCase().includes(q);
@@ -88,7 +104,7 @@ export const FoodGuideView: React.FC<FoodGuideViewProps> = ({
       }
       return true;
     });
-  }, [selectedRegion, searchQuery]);
+  }, [selectedRegion, searchQuery, onlyFavorites, onlyVisited, favorites, visited]);
 
   // Calculate region counts for current view
   const regionCounts = useMemo(() => {
@@ -124,12 +140,14 @@ export const FoodGuideView: React.FC<FoodGuideViewProps> = ({
     { label: "场景备选", value: "situational" as FoodPriority, colorClass: "bg-teal text-white" },
   ];
 
-  const hasActiveFilters = selectedTypes.length > 0 || selectedPriorities.length > 0 || searchQuery.trim() !== "";
+  const hasActiveFilters = selectedTypes.length > 0 || selectedPriorities.length > 0 || searchQuery.trim() !== "" || onlyFavorites || onlyVisited;
 
   const handleClearFilters = () => {
     setSelectedTypes([]);
     setSelectedPriorities([]);
     setSearchQuery("");
+    setOnlyFavorites(false);
+    setOnlyVisited(false);
   };
 
   const getCategoryBadgeColor = (cat: FoodType) => {
@@ -318,6 +336,41 @@ export const FoodGuideView: React.FC<FoodGuideViewProps> = ({
             )}
           </div>
         )}
+
+        {/* Status Filters (Favorites / Visited) */}
+        <div className="flex flex-wrap items-center justify-between gap-4 pt-3 mt-2 border-t border-line/40">
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setOnlyFavorites(!onlyFavorites)}
+              className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold border transition-all ${
+                onlyFavorites
+                  ? "bg-rose-500 text-white border-rose-500 shadow-md shadow-rose-500/20"
+                  : "bg-sand/60 text-text border-line hover:bg-sand"
+              }`}
+            >
+              <span>❤️ 只看收藏</span>
+            </button>
+            <button
+              onClick={() => setOnlyVisited(!onlyVisited)}
+              className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold border transition-all ${
+                onlyVisited
+                  ? "bg-emerald-500 text-white border-emerald-500 shadow-md shadow-emerald-500/20"
+                  : "bg-sand/60 text-text border-line hover:bg-sand"
+              }`}
+            >
+              <span>✅ 只看已打卡</span>
+            </button>
+          </div>
+          {hasActiveFilters && (
+            <button
+              onClick={handleClearFilters}
+              className="flex items-center gap-1.5 px-4 py-1.5 rounded-xl bg-rose-500/10 hover:bg-rose-500/20 text-rose-600 dark:text-rose-400 font-bold text-xs border border-rose-500/30 transition-all shadow-sm active:scale-95"
+            >
+              <Trash2 className="w-3.5 h-3.5" />
+              <span>一键清空筛选</span>
+            </button>
+          )}
+        </div>
       </div>
 
       {/* Main Grid Section */}
@@ -372,7 +425,19 @@ export const FoodGuideView: React.FC<FoodGuideViewProps> = ({
                         : "瑶亚岛"}
                     </span>
                   </div>
-                  <div className="absolute top-3 right-3">
+                  <div className="absolute top-3 right-3 flex items-center gap-1.5">
+                    {onToggleVisited && (
+                      <CheckInButton
+                        isVisited={visited.includes(item.id)}
+                        onToggle={(e) => onToggleVisited(item.id, e)}
+                      />
+                    )}
+                    {onToggleFavorite && (
+                      <FavoriteButton
+                        isFavorite={favorites.includes(item.id)}
+                        onToggle={(e) => onToggleFavorite(item.id, e)}
+                      />
+                    )}
                     <PriorityBadge priority={item.priority} size="sm" solid />
                   </div>
                 </div>
@@ -473,7 +538,21 @@ export const FoodGuideView: React.FC<FoodGuideViewProps> = ({
                         </h3>
                         <p className="text-xs font-semibold text-muted">{rest.nameEn}</p>
                       </div>
-                      <PriorityBadge priority={rest.priority as any} size="sm" />
+                      <div className="flex items-center gap-1.5 shrink-0">
+                        {onToggleVisited && (
+                          <CheckInButton
+                            isVisited={visited.includes(rest.id)}
+                            onToggle={(e) => onToggleVisited(rest.id, e)}
+                          />
+                        )}
+                        {onToggleFavorite && (
+                          <FavoriteButton
+                            isFavorite={favorites.includes(rest.id)}
+                            onToggle={(e) => onToggleFavorite(rest.id, e)}
+                          />
+                        )}
+                        <PriorityBadge priority={rest.priority as any} size="sm" />
+                      </div>
                     </div>
 
                     <div className="flex flex-wrap gap-2 text-xs font-semibold">
@@ -557,6 +636,10 @@ export const FoodGuideView: React.FC<FoodGuideViewProps> = ({
         restaurant={selectedRestaurant}
         onClose={() => setSelectedRestaurant(null)}
         onViewOnMap={onViewRestaurantOnMap}
+        isFavorite={selectedRestaurant ? favorites.includes(selectedRestaurant.id) : false}
+        onToggleFavorite={onToggleFavorite}
+        isVisited={selectedRestaurant ? visited.includes(selectedRestaurant.id) : false}
+        onToggleVisited={onToggleVisited}
       />
     </div>
   );

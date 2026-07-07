@@ -24,6 +24,8 @@ interface InteractiveMapProps {
   initialRegion?: Region | "all";
   selectedRouteId?: string;
   onClearRouteId?: () => void;
+  selectedPlaceId?: string;
+  onClearPlaceId?: () => void;
 }
 
 const defaultCenters: Record<string, [number, number]> = {
@@ -46,8 +48,15 @@ const MapController: React.FC<{
   zoom: number;
   places: readonly Place[];
   filterKey: string;
-}> = ({ center, zoom, places, filterKey }) => {
+  selectedPlace: Place | null;
+}> = ({ center, zoom, places, filterKey, selectedPlace }) => {
   const map = useMap();
+
+  useEffect(() => {
+    if (selectedPlace) {
+      map.setView([selectedPlace.lat, selectedPlace.lng], 15, { animate: true });
+    }
+  }, [selectedPlace, map]);
 
   useEffect(() => {
     let prevSize = map.getSize();
@@ -101,6 +110,8 @@ export const InteractiveMap: React.FC<InteractiveMapProps> = ({
   initialRegion = "all",
   selectedRouteId,
   onClearRouteId,
+  selectedPlaceId,
+  onClearPlaceId,
 }) => {
   const [region, setRegion] = useState<Region | "all">(initialRegion);
   const [selectedPriorities, setSelectedPriorities] = useState<Priority[]>([]);
@@ -120,6 +131,22 @@ export const InteractiveMap: React.FC<InteractiveMapProps> = ({
       }
     }
   }, [selectedRouteId, routes]);
+
+  useEffect(() => {
+    if (selectedPlaceId) {
+      const place = places.find((p) => p.id === selectedPlaceId);
+      if (place) {
+        setSelectedPlace(place);
+        setRegion(place.region);
+        if (place.kind === "restaurant") {
+          setSelectedKind("restaurant");
+        } else {
+          setSelectedKind("all");
+        }
+      }
+      onClearPlaceId?.();
+    }
+  }, [selectedPlaceId, places, onClearPlaceId]);
 
   const activeRoute = useMemo(() => routes.find((r) => r.id === activeRouteId), [routes, activeRouteId]);
 
@@ -391,6 +418,7 @@ export const InteractiveMap: React.FC<InteractiveMapProps> = ({
             zoom={currentZoom}
             places={filteredPlaces}
             filterKey={filterKey}
+            selectedPlace={selectedPlace}
           />
 
           {routePlaces.length > 1 && (

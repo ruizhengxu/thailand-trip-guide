@@ -55,7 +55,7 @@ export const TripCountdown: React.FC = () => {
   // Determine current journey status and target time
   let targetTime = LANDING_BKK_MS;
   let badgeIcon = <Plane className="w-4 h-4 text-orange-light animate-bounce" style={{ animationDuration: "2s" }} />;
-  let badgeTitle = "✈️ 期待出发 · 距离航班落地泰国曼谷 (BKK)";
+  let badgeTitle = "期待出发 · 距离航班落地泰国曼谷 (BKK)";
   let subTitle = "温州 (WNZ) ➔ 曼谷 (BKK) · 8月10日 16:50 降落";
   let glowColor = "from-orange-500/20 via-teal-500/20 to-transparent";
 
@@ -68,7 +68,7 @@ export const TripCountdown: React.FC = () => {
   } else if (now >= TAKEOFF_BKK_MS && now < LANDING_PVG_MS) {
     targetTime = LANDING_PVG_MS; // Countdown to landing in Shanghai
     badgeIcon = <Plane className="w-4 h-4 text-sky-300 animate-pulse" />;
-    badgeTitle = "✈️ 正在返回上海的航班上 · 距离着陆还有";
+    badgeTitle = "正在返回上海的航班上 · 距离着陆还有";
     subTitle = "曼谷 (BKK) ➔ 上海 (PVG) · 8月24日 00:20 降落";
     glowColor = "from-sky-500/20 via-indigo-500/20 to-transparent";
   } else if (now >= LANDING_PVG_MS) {

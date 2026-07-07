@@ -2,17 +2,27 @@ import React, { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import type { Place } from "../../types";
 import { X, ExternalLink, MapPin, Clock, DollarSign, Info, Compass } from "lucide-react";
+import { FavoriteButton } from "../ui/FavoriteButton";
+import { CheckInButton } from "../ui/CheckInButton";
 
 interface RestaurantModalProps {
   restaurant: Place | null;
   onClose: () => void;
   onViewOnMap?: (restaurantId: string) => void;
+  isFavorite?: boolean;
+  onToggleFavorite?: (id: string, e: React.MouseEvent) => void;
+  isVisited?: boolean;
+  onToggleVisited?: (id: string, e: React.MouseEvent) => void;
 }
 
 export const RestaurantModal: React.FC<RestaurantModalProps> = ({
   restaurant,
   onClose,
   onViewOnMap,
+  isFavorite = false,
+  onToggleFavorite,
+  isVisited = false,
+  onToggleVisited,
 }) => {
   const [renderedRestaurant, setRenderedRestaurant] = useState<Place | null>(restaurant);
   const [isClosing, setIsClosing] = useState(false);
@@ -74,10 +84,22 @@ export const RestaurantModal: React.FC<RestaurantModalProps> = ({
       >
         {/* Header Banner */}
         <div className="relative h-28 bg-gradient-to-br from-amber-500/80 via-rose-500/80 to-teal/80 p-6 flex items-end justify-between text-white flex-shrink-0">
-          <div className="absolute top-4 right-4">
+          <div className="absolute top-4 right-4 flex items-center gap-2">
+            {onToggleVisited && (
+              <CheckInButton
+                isVisited={isVisited}
+                onToggle={(e) => onToggleVisited(activeRestaurant.id, e)}
+              />
+            )}
+            {onToggleFavorite && (
+              <FavoriteButton
+                isFavorite={isFavorite}
+                onToggle={(e) => onToggleFavorite(activeRestaurant.id, e)}
+              />
+            )}
             <button
               onClick={handleClose}
-              className="p-2 rounded-full bg-black/30 hover:bg-black/50 text-white transition-colors"
+              className="p-2 rounded-full bg-black/30 hover:bg-black/50 text-white transition-colors ml-1"
             >
               <X className="w-5 h-5" />
             </button>

@@ -41,12 +41,27 @@ export const PlaceListView: React.FC<PlaceListViewProps> = ({
   }, [initialKind]);
 
   const regionCounts = useMemo(() => {
-    const counts: Record<string, number> = { all: places.length };
-    places.forEach((p) => {
+    const relevantPlaces =
+      selectedKind === "place"
+        ? places.filter((p) => (p.kind || "place") !== "restaurant")
+        : selectedKind === "restaurant"
+        ? places.filter((p) => p.kind === "restaurant")
+        : places;
+    const counts: Record<string, number> = { all: relevantPlaces.length };
+    relevantPlaces.forEach((p) => {
       counts[p.region] = (counts[p.region] || 0) + 1;
     });
     return counts;
-  }, [places]);
+  }, [places, selectedKind]);
+
+  const basePlacesCount = useMemo(() => {
+    if (selectedKind === "place") {
+      return places.filter((p) => (p.kind || "place") !== "restaurant").length;
+    } else if (selectedKind === "restaurant") {
+      return places.filter((p) => p.kind === "restaurant").length;
+    }
+    return places.length;
+  }, [places, selectedKind]);
 
   const categories = useMemo(() => {
     let regionPlaces =
@@ -222,7 +237,7 @@ export const PlaceListView: React.FC<PlaceListViewProps> = ({
 
       <div className="flex items-center justify-between text-xs sm:text-sm text-muted font-medium px-1">
         <span>
-          显示 <strong className="text-text">{filteredPlaces.length}</strong> / {places.length} 个地点
+          显示 <strong className="text-text">{filteredPlaces.length}</strong> / {basePlacesCount} 个地点
         </span>
         {hasActiveFilters && (
           <button

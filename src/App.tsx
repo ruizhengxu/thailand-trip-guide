@@ -39,6 +39,7 @@ export default function App() {
 
   const [selectedRegion, setSelectedRegion] = useState<Region | "all">("all");
   const [selectedRouteIdForMap, setSelectedRouteIdForMap] = useState<string | undefined>(undefined);
+  const [selectedPlaceIdForMap, setSelectedPlaceIdForMap] = useState<string | undefined>(undefined);
 
   const [isDark, setIsDark] = useState<boolean>(() => {
     try {
@@ -176,6 +177,7 @@ export default function App() {
     if (rest) {
       setSelectedRegion(rest.region);
     }
+    setSelectedPlaceIdForMap(restId);
     switchTab("map");
   };
 
@@ -206,6 +208,8 @@ export default function App() {
           initialRegion={selectedRegion}
           selectedRouteId={selectedRouteIdForMap}
           onClearRouteId={() => setSelectedRouteIdForMap(undefined)}
+          selectedPlaceId={selectedPlaceIdForMap}
+          onClearPlaceId={() => setSelectedPlaceIdForMap(undefined)}
         />
       </div>
 
@@ -237,6 +241,10 @@ export default function App() {
         <FoodGuideView
           initialRegion={selectedRegion}
           onViewRestaurantOnMap={handleNavigateToMapWithRestaurant}
+          favorites={favorites}
+          onToggleFavorite={handleToggleFavorite}
+          visited={visited}
+          onToggleVisited={handleToggleVisited}
         />
       </div>
 
